@@ -27,6 +27,32 @@ h1 {
   background: rgba(0,255,255,0.2);
 }
 
+/* คอนเทนเนอร์ที่หุ้มรูปไว้ */
+.poster-container {
+    width: 100%;           /* กว้างเต็มตาม Grid */
+    aspect-ratio: 2 / 3;   /* บังคับสัดส่วน กว้าง 2 ส่วน สูง 3 ส่วน */
+    overflow: hidden;      /* ตัดส่วนเกินทิ้ง */
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    background-color: #1a1a1a; /* สีพื้นหลังถ้าโหลดรูปไม่ขึ้น */
+}
+
+/* ตัวรูปภาพข้างใน */
+.movie-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* สำคัญมาก: ขยายรูปให้เต็มพื้นที่โดยไม่เสียสัดส่วน (เบี้ยว) */
+    object-position: center; /* จัดให้อยู่ตรงกลาง */
+    display: block;
+}
+
+/* ปรับขนาด Grid ของ List ให้เท่ากัน */
+#movie-list {
+    display: grid;
+    
+    grid-template-columns: repeat(5, minmax(160px, 1fr)); /* ขนาดขั้นต่ำ 160px */
+    gap: 20px;
+}
+
 button {
   background: black;
   color: cyan;
@@ -40,3 +66,4 @@ button:hover {
   background: cyan;
   color: black;
 }
+
