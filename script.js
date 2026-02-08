@@ -100,8 +100,10 @@ function submitVote(votes) {
   });
 
   alert("✅ Vote Submitted!");
+  window.location.reload(); 
 }
 
 
 console.log("Firebase connected:", db);
+
 
