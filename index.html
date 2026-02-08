@@ -1,49 +1,24 @@
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script> <script src="script.js"></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎬 Home Theater Movie Vote</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <title>🎬 Home Theater Movie Vote</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="bg-black text-cyan-400 font-mono min-h-screen p-4 md:p-10">
+  <h1>🎥 HOME THEATER VOTING</h1>
+  <p>Select your TOP 3 movies</p>
 
-    <header class="text-center mb-10">
-        <h1 class="text-4xl font-black tracking-tighter italic border-b-2 border-cyan-500 inline-block pb-2 shadow-[0_0_15px_#00f3ff]">
-            SYSTEM // MOVIE_VOTE_v1.0
-        </h1>
-        <p class="mt-4 opacity-70 italic">> SELECT_TOP_3_MOVIES_FOR_TRANSMISSION</p>
-    </header>
+  <div id="movie-list"></div>
 
-    <div id="auth-container" class="max-w-md mx-auto mb-12">
-        <div id="login-form" class="flex flex-col gap-4 border border-cyan-500/30 p-6 bg-black/50 backdrop-blur-sm">
-            <button onclick="handleGoogleLogin()" class="border-2 border-white text-white p-3 flex items-center justify-center gap-2 hover:bg-white hover:text-black transition-all shadow-[0_0_15px_rgba(255,255,255,0.3)] font-bold">
-                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" width="20">
-                ACCESS VIA GOOGLE_ID
-            </button>
-        </div>
+  <button id="submitVote">🚀 Submit Vote</button>
 
-        <div id="user-info" class="hidden text-center p-4 border border-cyan-500 bg-cyan-500/10">
-            <p id="user-display-name" class="font-bold text-white"></p>
-            <button onclick="auth.signOut()" class="text-xs text-red-400 underline mt-2">TERMINATE_SESSION (Logout)</button>
-        </div>
-    </div>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
-    <div id="movie-list" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"></div>
 
-    <div class="mt-12 text-center">
-        <button id="submitVote" class="w-full md:w-64 border-2 border-cyan-400 py-4 px-8 font-black hover:bg-cyan-400 hover:text-black transition-all shadow-[0_0_20px_#00f3ff] uppercase tracking-widest">
-            🚀 Submit Vote
-        </button>
-    </div>
-
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script> <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
