@@ -63,6 +63,7 @@ button:hover {
 #movie-list {
     display: grid;
     
-    grid-template-columns: repeat(5, minmax(160px, 1fr)); /* ขนาดขั้นต่ำ 160px */
+    grid-template-columns: repeat(3, minmax(160px, 1fr)); /* ขนาดขั้นต่ำ 160px */
     gap: 20px;
 }
+
